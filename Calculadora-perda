@@ -22,17 +22,16 @@
     <br><br>
 
     <div id="div_resultado"></div>
-</body>
 
     <script>
         function calcularPerdas() {
             let capacidade = Number(ipt_capacidade.value);
             let preco = Number(ipt_preco.value);
             
-            // Calculando o valor total do silo - cheio
+            // Calcula o valor total do silo cheio
             let valor_total_silo = capacidade * preco;
             
-            // Calculando o desvio  2%
+            // Segundo a documentação, desvios podem ser de até 2%
             let taxa_perda = 0.02; 
             let prejuizo_anual = valor_total_silo * taxa_perda;
 
@@ -49,4 +48,5 @@
             div_resultado.innerHTML = mensagem;
         }
     </script>
+</body>
 </html>
